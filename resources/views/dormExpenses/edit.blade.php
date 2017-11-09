@@ -21,7 +21,7 @@
             </ul>
         </div>
     @endif
-    {!! Form::model($dormExpense, ['method' => 'PATCH','route' => ['dormExpenses.update', $dormExpense->ssn]]) !!}
+    {!! Form::model($dormExpense, ['method' => 'PATCH','route' => ['dormExpenses.update', $dormExpense->id]]) !!}
         @include('dormExpenses.form')
     {!! Form::close() !!}
 @endsection

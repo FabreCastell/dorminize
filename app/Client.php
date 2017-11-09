@@ -14,7 +14,7 @@ class Client extends Model
 
     public function pay()
     {
-        return $this->hasMany('App\Bill');
+        return $this->hasMany('App\Bill','invoice_number');
     }
 
     public function rent()

@@ -238,6 +238,9 @@
                 @foreach ($dorms as $dorm)
                 <tr>
                     <td>{{ $dorm->id}}</td>
+
+
+                    
                     <td>{{ $dorm->namet}}</td>
                     <td>{{ $dorm->location}}</td>
                     <td>{{ $dorm->building_amt}}</td>

@@ -19,25 +19,25 @@
     </div>
     <div class="col-xs-12 col-sm-12 col-md-12">
         <div class="form-group">
-            <strong>Gender:</strong>
+            <strong>gender:</strong>
             {!! Form::text('gender', null, array('placeholder' => 'Previous Address','class' => 'form-control')) !!}
         </div>
     </div>
     <div class="col-xs-12 col-sm-12 col-md-12">
         <div class="form-group">
-            <strong>Work Hour:</strong>
+            <strong>work_hour:</strong>
             {!! Form::text('work_hour', null, array('placeholder' => 'Previous Address','class' => 'form-control')) !!}
         </div>
     </div>
     <div class="col-xs-12 col-sm-12 col-md-12">
         <div class="form-group">
-            <strong>PhoneNumber:</strong>
+            <strong>phone_number:</strong>
             {!! Form::text('phone_number', null, array('placeholder' => 'Previous Address','class' => 'form-control')) !!}
         </div>
     </div>
     <div class="col-xs-12 col-sm-12 col-md-12">
         <div class="form-group">
-            <strong>Salary:</strong>
+            <strong>salary:</strong>
             {!! Form::text('salary', null, array('placeholder' => 'Previous Address','class' => 'form-control')) !!}
         </div>
     </div>

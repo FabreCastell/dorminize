@@ -23,12 +23,11 @@ class CreateFurnituresTable extends Migration
             $table->dateTime('change_date');
             $table->text('pic_dest')->nullable();
             $table->timestamps();
-            // $table->integer('dorm_id')->unsigned();
-            // $table->string('room_number');
+            $table->integer('dorm_id')->unsigned();
+            $table->integer('room_id')->unsigned();
 
-            // $table->primary('id');
-            // $table->foreign('dorm_id')->references('id')->on('dorms');
-            // $table->foreign('room_number')->references('number')->on('rooms');
+            $table->foreign('dorm_id')->references('id')->on('dorms');
+            $table->foreign('room_id')->references('id')->on('rooms');
         });
     }
 

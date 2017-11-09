@@ -18,8 +18,8 @@ class CreateDormExpensesTable extends Migration
             $table->dateTime('datetime');
             $table->float('water_cost',8,2);
             $table->float('elec_cost',8,2);
-            // $table->integer('dorm_id')->unsigned();
-            // $table->foreign('dorm_id')->references('id')->on('dorms');
+            $table->integer('dorm_id')->unsigned();
+            $table->foreign('dorm_id')->references('id')->on('dorms');
         });
     }
 

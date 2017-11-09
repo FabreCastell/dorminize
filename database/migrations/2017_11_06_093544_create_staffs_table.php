@@ -23,10 +23,10 @@ class CreateStaffsTable extends Migration
             $table->string('phone_number');
             $table->integer('salary');
             $table->timestamps();
-            // $table->integer('dorm_id')->unsigned();
+            $table->integer('dorm_id')->unsigned();
 
             $table->primary('ssn');
-            // $table->foreign('dorm_id')->references('id')->on('dorms');
+            $table->foreign('dorm_id')->references('id')->on('dorms');
         });
     }
 

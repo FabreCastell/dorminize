@@ -25,10 +25,9 @@ class CreateDormsTable extends Migration
             $table->text('rule');
             $table->text('pic_dest')->nullable();
             $table->timestamps();
-            // $table->string('owner_ssn');
+            $table->string('owner_ssn');
 
-            // $table->primary('id');
-            // $table->foreign('owner_ssn')->references('ssn')->on('owners');
+            $table->foreign('owner_ssn')->references('ssn')->on('owners');
         });
     }
 

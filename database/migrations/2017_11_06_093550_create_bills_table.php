@@ -14,18 +14,20 @@ class CreateBillsTable extends Migration
     public function up()
     {
         Schema::create('bills', function (Blueprint $table) {
+            $table->engine = 'InnoDB';
+
             $table->increments('invoice_number');
             $table->float('elec_unit',8,2);
             $table->float('water_unit',8,2);
             $table->dateTime('date');
             $table->string('status');
-            // $table->string('client_ssn');
-            // $table->string('room_number');
-            // $table->unsignedInteger('dorm_id');
+            $table->string('client_ssn');
+            $table->integer('room_id')->unsigned();
+            $table->integer('dorm_id')->unsigned();
 
-            // $table->foreign('client_ssn')->references('ssn')->on('clients');
-            // $table->foreign('room_number')->references('number')->on('rooms');
-            // $table->foreign('dorm_id')->references('id')->on('dorms');
+            $table->foreign('client_ssn')->references('ssn')->on('clients');
+            $table->foreign('room_id')->references('id')->on('rooms');
+            $table->foreign('dorm_id')->references('id')->on('dorms');
         });
     }
 
